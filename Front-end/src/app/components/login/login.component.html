@@ -1,0 +1,14 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
+  <h2>Ingresar</h2>
+  <mat-form-field>
+      <mat-label>Correo electrónico</mat-label>
+      <input matInput placeholder="ejemplo@correo.com" formControlName="email">
+  </mat-form-field>
+  <mat-form-field>
+      <mat-label>Contraseña</mat-label>
+      <input matInput type="password" placeholder="Mínimo 6 caractétes" formControlName="password">
+  </mat-form-field>
+  <button color="accent" [disabled]="!loginForm.valid" mat-raised-button type="submit">
+      <span>Ingresar</span>
+  </button>
+</form>

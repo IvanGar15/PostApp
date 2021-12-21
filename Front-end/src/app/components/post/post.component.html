@@ -1,0 +1,19 @@
+<app-create-post (create)="createPost()"></app-create-post>
+
+<mat-card *ngFor="let post of posts$ | async">
+    <button *ngIf="post.user === userId.toString()" mat-icon-button class="button">
+        <mat-icon (click)="delete(post.id)" color="warn">delete</mat-icon>
+    </button>
+    <div class="post-title">
+        {{post.title}}
+    </div>
+    <div class="post-date">
+        Creado el {{post.createdAt}}
+    </div>
+    <div class="post-body">
+        {{post.content}}
+    </div>
+    <div class="post-auth">
+        By: {{post.user}}
+    </div>
+</mat-card>

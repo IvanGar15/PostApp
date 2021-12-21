@@ -1,0 +1,17 @@
+<button (click)="isOpen = !isOpen" mat-raised-button color="accent">
+    <mat-icon>add</mat-icon>Crear publicación
+</button>
+<form *ngIf="isOpen" [formGroup]="form" #formDirective="ngForm" (ngSubmit)="onSubmit(form.value)" novalidate>
+    <h2>Crear publicación</h2>
+    <mat-form-field>
+        <mat-label>Título</mat-label>
+        <input matInput placeholder="Título del post" formControlName="title">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Contenido</mat-label>
+        <input matInput placeholder="Contenido del post" formControlName="content">
+    </mat-form-field>
+    <button color="accent" [disabled]="!form.valid" mat-raised-button type="submit">
+        <span>Publicar</span>
+    </button>
+</form>  

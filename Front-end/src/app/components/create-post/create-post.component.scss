@@ -1,0 +1,19 @@
+::ng-deep .mat-form-field {
+    width: 100%;
+    .mat-input-element {
+        color: black;
+    }
+    .mat-form-field-label {
+        color: black;
+    }
+    .mat-form-field-underline {
+        background-color: black;
+    }
+    .mat-form-field-required-marker {
+        color: black;
+    }
+}
+button {
+    margin-bottom: 2em;
+    width: 100%;
+}
